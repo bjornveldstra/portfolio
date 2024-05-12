@@ -1,0 +1,129 @@
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Ajouté pour centrer verticalement et empiler verticalement */
+    background-color: #bcccdc;
+}
+
+.container h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3em;
+    color: #333;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Modifié pour permettre au sous-titre de se situer sous l'image */
+    align-items: center;
+    margin-bottom: 20px; /* Espacement entre l'image et les cercles */
+}
+
+.image-container img {
+    width: 800px; /* Ajustez selon la taille de votre image */
+    border-radius: 20px;
+    margin-bottom: 10px; /* Espacement entre l'image et le sous-titre */
+}
+
+.image-container .sub-title {
+    color: #333;
+    font-size: 16px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 64px;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.circle1{
+    background-color: #87CEEB;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Assurez-vous que l'overlay est au-dessus de tout le reste */
+}
+
+.text-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    z-index: 101; /* Plus haut que l'overlay pour rester au-dessus */
+    text-align: center;
+}
+
+/* Ajoutez ces styles si vous n'en avez pas déjà pour les cercles et les clics */
+.circle {
+    cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
+}
+
+/* Positionnement des cercles autour de l'image */
+
+
+#circle1 { top: -200px; } /*cercle en haut*/
+#circle2 { top: 80px; right: -220px; } /*cercle milieu gauche*/
+#circle3 { bottom: -200px; right: 50px; } /*cercle bas droit*/
+
+#circle4 { bottom: -200px; left: 50px; } /*cercle bas gauche*/
+#circle5 { top: 80px; left: -220px; } /*cercle milieu droit*/
+
+#circle1 {
+    background-color: #87CEEB; /* Bleu ciel clair */
+    /* autres styles pour #circle1 */
+}
+
+#circle2 {
+    background-color: #B0C4DE; /* Bleu acier clair */
+    /* autres styles pour #circle2 */
+}
+
+#circle3 {
+    background-color: #1E90FF; /* Bleu Dodger */
+    /* autres styles pour #circle3 */
+}
+
+#circle4 {
+    background-color: #4169E1; /* Bleu royal */
+    /* autres styles pour #circle4 */
+}
+
+#circle5 {
+    background-color: #000080; /* Bleu marine */
+    /* autres styles pour #circle5 */
+}
+
+

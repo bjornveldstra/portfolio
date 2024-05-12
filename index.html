@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Björn Veldstra</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header1">
+        <div class="logo">
+            <img src="public final/Logo BV.png" alt="Logo">
+        </div>
+    </div>
+
+    <div id="header2">
+        <a id="accueilButton">Accueil</a>
+        <a href="#about">A propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#centres">Centres d'intérêts</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header2');
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            if (scrollPosition > 100) { // ajustez ce nombre en fonction de vos besoins
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+
+    <!--------- HOME -------------->
+
+    <div id="home">
+        <div>
+            <div class="text">
+                <h1>Portfolio de Björn VELDSTRA</h1>
+                <h2>Étudiant en Génie Mécanique et Productique</h2>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <button id="scroll-btn">Découvrir</button>
+        </div>
+    </div>
+
+
+    <!------------------A propos----------------->
+
+    <div id="about" class="hidden">
+        <div class="container">
+            <div class="row">
+                <img src="public final/moi 2.png"> <!-------------changer photo------------>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">A propos de moi</h1>
+                    <p>Actuellement en troisième année de BUT GMP (Génie Mécanique et
+                        Productique) à l'IUT de Nantes, option CPDC (Conception et Production Durable et Citoyenne).
+                        Cette formation, d'une durée de trois ans, m'a permis d'obtenir un contrat
+                        d'alternance de deux ans chez Modular Solutions Le Mans, une start-up spécialisée dans le
+                        domaine du bâtiment.
+                        Aujourd'hui, je suis déterminé à approfondir mes compétences et à devenir un acteur clé dans
+                        la mise en œuvre de solutions durables au sein de l'industrie.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experiences')">Expériences</p>
+                        <p class="tab-links" onclick="opentab('formations')">Formations</p>
+                        <p class="tab-links" onclick="opentab('curriculum vitae')">Curriculum Vitae</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="experiences">
+                        <ul>
+                            <li><span>2022-Présent</span><br>Technicien en bureau d'études chez <a
+                                    href="https://www.linkedin.com/company/msm-modular-solutions-le-mans/"
+                                    target="_blank">Modular Solutions Le Mans<span class="tooltip-text">Cliquez pour
+                                        plus d'informations</span></a> (72)</li>
+                            <li><span>2022</span><br>Stagiaire technicien en amélioration continue chez <a
+                                    href="https://www.wartsila.com/fra/marine/ateliers" target="_blank">Wärtsilä<span
+                                        class="tooltip-text">Cliquez pour plus d'informations</span></a> (17)</li>
+                            <li><span>2021-2022</span><br>Intérimaire responsable de buvette à <a
+                                    href="https://billetterie.fcnantes.com/fr/infos-pratiques/jour-de-match/restauration"
+                                    target="_blank">La Beaujoire<span class="tooltip-text">Cliquez pour plus
+                                        d'informations</span></a> (44)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="formations">
+                        <ul>
+                            <li><span>2021-2024</span><br><a
+                                    href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp"
+                                    target="_blank">IUT de Nantes<span class="tooltip-text">Cliquez pour plus
+                                        d'informations</span></a>, formation GMP (Génie Mécanique et Productique)</li>
+                            <li><span>2018-2021</span><br><a
+                                    href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank">Lycée
+                                    Nicolas Appert<span class="tooltip-text">Cliquez pour plus
+                                        d'informations</span></a>, spécialités Mathématiques et Physique-Chimie</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="curriculum vitae">
+                        <ul>
+                            <li><a href="C:/Users/bjorn/OneDrive/Bureau/Candidatures écoles/CV VELDSTRA BJORN.pdf"
+                                    target="_blank" class="download-cv-button">Télécharger CV</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------competences------------------------->
+
+    <div id="competences" class="hidden">
+        <div class="container">
+            <h1 class="sub-title">Compétences</h1>
+            <div class="competences-list">
+                <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>CAO</h2>
+                    <p>SolidWorks, 3DExperience, Catia V5, eDrawings, NCSimul</p>
+                    <a href="public final/CAO.pdf" target="_blank">En savoir plus</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-industry"></i>
+                    <h2>Industrie</h2>
+                    <p>Machines-outils, Soudage, Pilotage industriel, Automatisation</p>
+                    <a href="public final/Industrie.pdf" target="_blank">En savoir plus</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Informatique</h2>
+                    <p>HTML, CSS, JavaScript, VBA Microsoft Excel</p>
+                    <a href="public final/Informatique.pdf" target="_blank">En savoir plus</a>
+                </div>
+                <div class="eco-conception">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h2>Éco-conception</h2>
+                    <p>Bilan carbone, Conception et Production Durable et Citoyenne</p>
+                    <a href="public final/Éco-conception.pdf" target="_blank">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------realisations------------------>
+
+    <div id="realisations" class="hidden">
+        <div class="container">
+            <h1 class="sub-title">Mes réalisations</h1>
+            <div class="realisations-list">
+                <div class="realisations">
+                    <img src="public final/BreizhBine.jpg">
+                    <div class="layer">
+                        <h3>BreizhBine</h3>
+                        <p>Modélisation et conception d'un véhicule artisanal</p>
+                        <a href="BreizhBine.html" target="_blank" id="showBreizhBine">
+                            <i class="fa-solid fa-cube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="realisations">
+                    <img src="public final/Ensemble pièces usinées.jpg">
+                    <div class="layer">
+                        <h3>Mécanofacture</h3>
+                        <p>Fabrication de pièces via différents procédés</p>
+                        <a href="Usinage.html" target="_blank" id="showPièces usinées">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="realisations">
+                    <img src="public final/ordi redim.jpg">
+                    <div class="layer">
+                        <h3>Portfolio</h3>
+                        <p>Création d'un portfolio entièrement codé</p>
+                        <a href="Informatique.html" target="_blank" id="showMon Portfolio">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="realisations">
+                    <img src="public final/Bilan carbone.png">
+                    <div class="layer">
+                        <h3>Bilan carbone</h3>
+                        <p>Mise en place d'un bilan carbone d'un bâtiment modulaire</p>
+                        <a href="Carbone.html" target="_blank" id="showBilan Carbone">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------centres d'intérêt------------------>
+
+    <div id="centres" class="hidden">
+        <div class="container">
+            <h1 class="sub-title">Centres d'intérêt</h1>
+            <div class="interests-section">
+                <div class="text-container">
+
+                    <!-- Utilisez des divs supplémentaires pour créer la disposition en zigzag -->
+                    <div class="phrase-wrapper">
+                        <div class="phrase-container phrase-1">
+                            Le cliff diving mélange adrénaline, liberté et nature de façon unique.
+                        </div>
+                        <div class="phrase-container phrase-2">
+                            Dès 11 ans, je me consacre à cette discipline extrême en Europe du Sud.
+                        </div>
+                    </div>
+                    <div class="phrase-wrapper">
+                        <div class="phrase-container phrase-3">
+                            Plus qu'un sport, c'est une quête de beauté et de dépassement personnel.
+                        </div>
+                        <div class="phrase-container phrase-4">
+                            Chaque plongeon, mêlant courage et grâce, devient une véritable aventure.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe width="882" height="496.125" src="https://www.youtube.com/embed/I10kBXhRDqY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>²
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------contact------------------>
+
+    <div id="contact" class="hidden">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contactez-moi</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>bjorn.veldstra@gmail.com</p>
+                    <d><i class="fa-solid fa-square-phone"></i>0783931100</d>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/bj%C3%B6rn-veldstra-371561250/" target="_blank">
+                            <f><i class="fa-brands fa-linkedin"></i>Mon LinkedIn</f>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Votre nom complet" required>
+                        <input type="email" name="Email" placeholder="Votre adresse mail" required>
+                        <textarea name="Message" id=" rows=" 30" placeholder="Votre message"></textarea>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©. Made with <i class="fa-solid fa-heart"></i> by Veldstra Björn</p>
+        </div>
+    </div>
+
+    <!-----------------google sheets------------------>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyH5VwOzUu-kgDsfmISbOaQnn44_I6Smt1vHhGOpByqK7vbTvBuqFE7SeA63b2TH57Kzw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const messageStatus = document.getElementById("msg") // Mise à jour de la variable
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    messageStatus.innerHTML = "Message envoyé avec succès !"
+                    setTimeout(function () {
+                        messageStatus.innerHTML = "" // Efface le message après 5 secondes
+                    }, 5000)
+                    form.reset()
+    
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    
+</body>
+
+<script src="index.mjs"></script>
+
+</html>

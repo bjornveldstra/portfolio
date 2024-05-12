@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilan Carbone</title>
+    <link rel="stylesheet" href="Carbone.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1>Bilan carbone d'un shelter :</h1>
+        <div class="image-container">
+            <img src="public final/Touraine.png" alt="Image du Shelter">
+            <p class="sub-title">Système étudié : Site de St Maure de Touraine</p>
+            <div class="circle" id="circle1" onclick="showText(this)" data-text="Ce bâtiment modulaire est intitulé xSO à la demande du client Axione. Il est composé de 2 modules de 26,5m² et capable d'accueillir 
+                                                                                 6 ou 12 kW IT. MSM a été chargé de la construction de la structure en acier et la livraison 
+                                                                                 depuis le Mans jusqu'au site d'exploitation. De mon côté, j'ai été chargé de rescencer toutes les pièces
+                                                                                 de ce shelter en précisant leur masse, composition principale et lieu de fabrication. Vous trouverez sur les prochains
+                                                                                 commentaires des diapositives montrant les résultats de notre travail.""><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="circle" id="circle2" onclick="showText(this)" data-img="public final/Diapo 1.png"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="circle" id="circle3" onclick="showText(this)" data-img="public final/Diapo 2.png"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="circle" id="circle4" onclick="showText(this)" data-img="public final/Diapo 3.png"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="circle" id="circle5" onclick="showText(this)" data-img="public final/Diapo 4.png"><i class="fa-solid fa-comment-dots"></i></div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="hideText()">
+        <div class="text-box" id="textBox">Ici votre texte ou image...</div>
+    </div>
+    <script>
+        function showText(element) {
+            const textBox = document.getElementById('textBox');
+            if (element.hasAttribute('data-text')) {
+                // Affiche du texte
+                textBox.innerHTML = element.getAttribute('data-text');
+            } else if (element.hasAttribute('data-img')) {
+                // Affiche une image
+                textBox.innerHTML = `<img src="${element.getAttribute('data-img')}" alt="Image" style="max-width:100%; height:auto;">`;
+            }
+            document.getElementById('overlay').style.display = 'flex';
+            document.getElementById('mainContainer').style.filter = 'blur(8px)';
+        }
+
+        function hideText() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('mainContainer').style.filter = 'none';
+        }
+    </script>
+</body>
+</html>

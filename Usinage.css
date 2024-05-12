@@ -1,0 +1,158 @@
+body {
+    background-color: #bcccdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    align-self: flex-start;
+    padding: 20px;
+    font-size: 25px;
+}
+
+h1 {
+    color: #333;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* -----------Chevrons-------------- */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 90%;
+    height: auto;
+}
+
+#left-chevron, #right-chevron {
+    font-size: 30px;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+#left-chevron:hover, #right-chevron:hover {
+    color: #0056b3;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* ----------Bouton usinez-------------- */
+
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin-top: 100px;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #FFF;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out infinite; /* Changement pour qu'elle dure 0.3s pour chaque cycle et se répète indéfiniment */
+}
+
+/* ------------image et texte additionnel-------------- */
+
+.content-container {
+    display: flex;
+    justify-content: space-around; /* Cela va espacer les éléments */
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Transition pour un effet d'apparition/disparition */
+}
+
+/* Lorsque la classe .hidden n'est pas présente, rendre les éléments visibles */
+#textual-info, #visual-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#textual-info.hidden, #visual-info.hidden {
+    display: none; /* S'assure que les conteneurs soient cachés au départ */
+}
+
+#textual-info {
+    background-color: #007BFF; /* La couleur de fond bleue */
+    color: white; /* Texte en blanc pour le contraste */
+    padding: 30px; /* Un peu d'espace autour du texte */
+    margin: 0 10px; /* Ajouter de la marge si nécessaire */
+    text-align: justify; /* Justifie le texte */
+    width: 350px; /* ou la largeur que vous voulez */
+    box-sizing: border-box; /* Pour inclure padding dans la largeur */
+    border-radius: 8px;
+}
+
+#textual-info p {
+    margin: 0; /* Retirer la marge par défaut du paragraphe si nécessaire */
+}
+
+#additional-image {
+    width: 370px; /* ou la largeur souhaitée */
+    height: auto; /* pour maintenir l'aspect ratio */
+    display: block; /* pour éviter les problèmes d'espace blanc en dessous de l'image */
+}
+
+
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pièces usinées</title>
+    <link rel="stylesheet" href="Usinage.css">
+    <script src="https://kit.fontawesome.com/9c081b63df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Pièces usinées :</h1>
+    </header>
+
+    <div class="content-container">
+        <div id="textual-info" class="hidden">
+            <p id="additional-text"></p>
+        </div>
+        <div class="image-container">
+            <i class="fa-solid fa-chevron-left" id="left-chevron"></i>
+            <img src="public final/Fraiseuse.png" alt="Fraiseuse numérique HAAS" id="target-image">
+            <i class="fa-solid fa-chevron-right" id="right-chevron"></i>
+        </div>
+        <div id="visual-info" class="hidden">
+            <img id="additional-image" src="additionalSrc" alt="">
+        </div>
+    </div>
+
+    <button id="action-button" onclick="shakeImage()">Usinez !</button>
+    
+    <script>
+        var images = [
+            {
+                src: "public final/Fraiseuse.png",
+                additionalSrc: "public final/Piece 1.png",
+                additionalText: "Cette pièce en aluminium a été usinée avec une fraiseuse numérique. Elle a été conçue grâce à un code G généré par Catia V5, un logiciel spécialisé en FAO (Fabrication Assistée par Ordinateur). Le processus d'usinage s'est déroulé en trois étapes principales : le surfaçage, le contournage et enfin, le perçage."
+            },
+            {
+                src: "public final/Four.png",
+                additionalSrc: "public final/Pece 2.png",
+                additionalText: "Cette pièce en forme d'équerre a été réalisée grâce à un processus de fusion dans un four spécialisé pour l'acier. Nous avons d'abord conçu un moule en sable qui reproduisait précisément les contours de la pièce. Ensuite, nous avons coulé de la fonte dans ce moule pour obtenir le résultat final que vous voyez ici."
+            },
+            {
+                src: "public final/Fraiseuse conv.png",
+                additionalSrc: "public final/Piece 3.png",
+                additionalText: "Les mors de cet étau ont été usinés à l'aide d'une fraiseuse conventionnelle que j'ai appris à manipuler lors de ma première année en Génie Mécanique et Productique (GMP). Cette expérience m'a permis d'acquérir les compétences de base nécessaires à l'utilisation d'une machine CNC, notamment en effectuant des passes le long de différents axes."
+            },
+            {
+                src: "public final/Plieuse.png",
+                additionalSrc: "public final/pied de table.png",
+                additionalText: "J'ai également eu l'opportunité d'utiliser à plusieurs reprises une plieuse de la marque Colly, notamment pour réaliser les plis de ce pied de table que j'ai conçu en troisième année. Pour une meilleure compréhension des techniques de pliage que j'ai pu utiliser, je vous invite à visionner cette vidéo : <a href='https://youtube.com/shorts/FuiYOHOnRF8?feature=share' target='_blank'>Vidéo de pliage</a>"
+            }
+        ];
+
+        var currentIndex = 0;
+
+        function shakeImage() {
+            var image = document.getElementById('target-image');
+            var button = document.getElementById('action-button');
+            image.classList.add('shake');
+            button.textContent = "Usinage...";
+            
+            setTimeout(function() {
+                image.classList.remove('shake');
+                button.textContent = "Usinez !";
+                displayAdditionalInfo();
+            }, 1500);
+        }
+
+        function displayAdditionalInfo() {
+            var textContainer = document.getElementById('textual-info');
+            var visualContainer = document.getElementById('visual-info');
+            var additionalImage = document.getElementById('additional-image');
+            var additionalText = document.getElementById('additional-text');
+
+            var currentInfo = images[currentIndex];
+
+            additionalText.innerHTML = currentInfo.additionalText; // Use innerHTML for HTML content
+            additionalImage.src = currentInfo.additionalSrc;
+
+            textContainer.classList.remove('hidden');
+            visualContainer.classList.remove('hidden');
+        }
+
+        document.getElementById('left-chevron').addEventListener('click', () => {
+            changeImage('left');
+        });
+
+        document.getElementById('right-chevron').addEventListener('click', () => {
+            changeImage('right');
+        });
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + (direction === 'left' ? -1 : 1) + images.length) % images.length;
+            var image = document.getElementById('target-image');
+            image.src = images[currentIndex].src;
+            image.alt = "Image de " + images[currentIndex].additionalText;
+
+            hideAdditionalInfo();
+        }
+
+        function hideAdditionalInfo() {
+            var textContainer = document.getElementById('textual-info');
+            var visualContainer = document.getElementById('visual-info');
+
+            if (!textContainer.classList.contains('hidden')) {
+                textContainer.classList.add('hidden');
+            }
+
+            if (!visualContainer.classList.contains('hidden')) {
+                visualContainer.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,889 @@
+/* Rest of your CSS code */
+body {
+    margin: 0px;
+    height: fit-content;
+    display: block;
+    background-color: black;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-image: url('public final/mécanique\ sombre.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin réel de votre image */
+    background-size: cover; /* Assure que l'image couvre tout l'écran sans être déformée */
+    background-position: center; /* Centre l'image dans la fenêtre de visualisation */
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-attachment: fixed; /* Fixe l'image lors du défilement de la page */
+}
+
+html{
+    scroll-behavior: smooth;
+        overflow-x: hidden;
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+.container {
+    background-color: rgba(2, 10, 19, 0.8); /* Ajoute un fond blanc semi-transparent */
+    padding: 20px; /* Ajoute de l'espace autour du texte */
+    border-radius: 12px;
+}
+
+.text {
+    color: #333; /* Couleur foncée pour le texte pour contraster avec le fond clair */
+}
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Switch button */
+
+
+
+/* header */
+
+#header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header1 .center {
+    justify-content: center; /* J'ai enlevé "important! */
+    transition: all 0.5s ease;
+}
+
+#header1.left {
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+#header1 .logo img {
+    width: 10vh;
+    padding: 50px;
+}
+
+#header1 .menu {
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+    color: #ffffff;
+}
+
+#header1 .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/*-------------Sidemnu-----------*/
+
+
+#header2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4.5%;
+    z-index: 1000;
+}
+
+#header2 a {
+    display: inline-block;
+    margin-right: 7%;
+    color: #fff; /* Change this color as per your design */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.8s ease;
+}
+
+#header2 a:hover, #header2 a:focus {
+    color: #4f4d51; /* Change hover color as needed */
+}
+
+#header2 a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4f4d51; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust position as needed */
+    transition: width 0.8s ease;
+}
+
+#header2 a:hover::after,
+#header2 a:focus::after {
+    width: 100%;
+}
+
+#header2.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Noir avec transparence */
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+
+
+/* Home page */
+
+#home {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement dans la vue */
+    align-items: center; /* Centre horizontalement */
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+
+#home h1 {
+    font-size: 5em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 20px; /* Ajoute un espace en dessous du titre */
+}
+
+#home h2 {
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+    font-family: "Helvetica", monospace;
+    margin: 0;
+}
+
+
+#home .container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    text-align: center; /* Ajuste l'alignement du texte pour centrer */
+}
+
+.text {
+    margin-top: 250px;
+    display: flex;
+    justify-content: center; /* Centre les éléments à l'intérieur de .text */
+    flex-direction: column;
+    text-align: center; /* Centre le texte horizontalement */
+    width: 100%; /* Utilise la pleine largeur pour centrer le contenu */
+}
+
+#scroll-btn {
+    margin-top: 150px;
+    padding: 10px 20px;
+    border: 3px solid #ffffff90;
+    color: #ffffff90;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 3em;
+    font-family: "Helvetica", monospace;
+    transition: transform 0.3s ease; /* Animation douce */
+}
+
+#scroll-btn:hover {
+    transform: scale(1.1); /* Agrandit le bouton de 10% */
+}
+
+/* Effet de transition plein écran */
+
+
+/* --------------About page-------------- */
+/* --------------About page-------------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+.container {
+    margin: auto; /* Centre horizontalement */
+    margin: 0px 5vw;
+}
+
+.row{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.about-col-1 {
+    width: fit-content;
+}
+
+.about-col-1 img{
+    height: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about-col-2 p {
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.about-col-2 h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: start;
+}
+
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4f4d51;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+@keyframes fadeBackground {
+    0%, 100% {
+        background-image: url('public final/mécanique\ sombre.png');
+    }
+    33% {
+        background-image: url('public final/mécanique\ sombre 2.png');
+    }
+    66% {
+        background-image: url('public final/mécanique\ sombre 3.png');
+    }
+}
+
+body {
+    background-size: cover;
+    animation: fadeBackground 18s infinite;
+}
+
+
+/*-----------------bouton cv--------------*/
+
+.download-cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #4f4d51; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Enlève le soulignement par défaut des liens */
+    font-weight: bold; /* Rend le texte en gras */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+.download-cv-button:hover {
+    background-color: #3e3d3e; /* Couleur légèrement différente au survol */
+}
+
+
+/*-----------------décoration barre de menu-------------*/
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #4f4d51;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4f4d51;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    width: 100%;
+}
+
+/*-----------------chat gpt sidemenu 20/04/2024 et sidemenu de base--------------*/
+
+#sidemenu {
+    display: none; /* Cache le menu par défaut */
+    position: fixed; /* Garde le menu fixé lors du défilement */
+    top: 20px; /* ou la valeur que vous préférez pour le décaler du haut */
+    margin-right: 20px;
+    z-index: 1000; /* Garantit que le menu reste au-dessus des autres contenus */
+    opacity: 1; /* sidemenu est entièrement visible */
+    transition: opacity 0.5s ease; /* Animer l'opacité avec une transition fluide */
+}
+
+
+#about, #competences, #realisations, #centres {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+    color: #fff;
+}
+
+
+nav {
+    width: 100%; /* Étend le nav à toute la largeur pour organiser d'autres éléments si nécessaire */
+    display: flex;
+    justify-content: flex-end; /* Assure que le menu reste à droite */
+}
+
+
+nav i.fa-bars {
+    display: none; /* Cache le bouton par défaut */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* Assure qu'il reste au-dessus des autres éléments */
+    cursor: pointer;
+}
+
+/* Afficher le bouton lorsqu'il est activé par JavaScript */
+nav i.fa-bars.active {
+    display: block;
+}
+
+/*-----------------Tooltips rubrique experiences------------------*/
+
+/* Style pour le lien qui contient le tooltip */
+#experiences a {
+    position: relative; /* Permet de positionner le tooltip par rapport au lien */
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Style de base pour le tooltip */
+#experiences a .tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+/* Positionnement */
+    position: absolute;
+     z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px; /* Moitié de la largeur du tooltip pour le centrer */
+
+    /* Effet de disparition/apparition */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Style pour le tooltip lorsque la souris survole le lien */
+#experiences a:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*-----------------Tooltips rubrique formations------------------*/
+
+/* Style pour le lien qui contient le tooltip */
+#formations a {
+    position: relative; /* Permet de positionner le tooltip par rapport au lien */
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Style de base pour le tooltip */
+#formations a .tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+/* Positionnement */
+    position: absolute;
+     z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px; /* Moitié de la largeur du tooltip pour le centrer */
+
+    /* Effet de disparition/apparition */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Style pour le tooltip lorsque la souris survole le lien */
+#formations a:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*---------------------competences---------------*/
+/*---------------------competences---------------*/
+
+#competences{
+    padding: 50px 0;
+}
+    
+.competences-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+
+.competences-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+
+.competences-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.competences-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.competences-list div a{
+    text-decoration: none;
+    color: #fff; 
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+
+.competences-list div:hover{
+    background: #4f4d51;
+    transform: translateY(-10px);
+}
+
+.competences-list .eco-conception:hover {
+    background: #4CAF50; /* Vert */
+    transform: translateY(-10px); /* Pour garder l'effet de déplacement vers le haut cohérent avec les autres rectangles */
+}
+
+
+/*---------------------réalisations---------------*/
+/*---------------------réalisations---------------*/
+
+
+#realisations{
+    padding: 50px 0;
+
+}
+
+.realisations-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.realisations{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.realisations img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 1s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #4f4d51);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le div .layer */
+}
+
+.layer * { /* Cela s'assurera que tous les enfants de .layer n'ont pas de marge externe perturbant le centrage */
+    margin: 0;
+    padding: 0; /* Ou ajustez en fonction de vos besoins */
+}
+
+.realisations:hover .layer{
+    opacity: 1; /* Ajout pour contrôler l'opacité au survol */
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #4f4d51;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.realisations:hover img{
+    transform: scale(1.1);
+}
+
+.realisations:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #4f4d51;
+}
+
+
+/*-----------------centres d'intérêts------------------*/
+/*-----------------centres d'intérêts------------------*/
+
+#centres {
+    margin-top: 150px;
+}
+
+
+.interests-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: 50px;
+}
+
+.phrase-wrapper {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: space-between; /* Espacement entre les rectangles */
+    flex-wrap: wrap; /* Permettre aux rectangles de s'enrouler si nécessaire */
+}
+
+.phrase-container {
+    position: relative;
+    box-sizing: border-box; /* S'assurer que padding et border sont inclus dans la largeur/hauteur */
+    padding: 40px; /* taille rectangle */
+    margin-bottom: 20px; /* Ajustez l'espacement vertical entre les rectangles */
+    border-radius: 5px;
+    background-color: #204d73; /* Couleur de base pour tous les rectangles */
+    width: 38%; /* Réduire la largeur pour permettre l'espacement */
+    height: auto; /* Hauteur automatique pour contenir le texte */
+    margin-right: 10%; /* Ajoutez une marge à droite pour le premier rectangle de chaque ligne */
+    display: flex;
+    align-items: center; /* Centrer le contenu verticalement */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    text-align: center; /* S'assurer que le texte lui-même est centré si plus d'une ligne */
+}
+
+/* Positionnement spécifique pour chaque rectangle */
+.phrase-1 { background-color: #669acc; left: 0; }
+.phrase-2 { background-color: #4d8ac7; right: 0; position: absolute; top: 80px; }/* Ajustez espace entre rectangles */
+.phrase-3 { background-color: #336699; left: 0; top: 80px; }/* Ajustez espace entre rectangles */
+.phrase-4 { background-color: #204d73; right: 0; position: absolute; top: 160px; }/* Ajustez espace entre rectangles */
+
+.interests-section .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.interests-section .video-container {
+    width: 55%; /* Ajusté la largeur du conteneur vidéo */
+    height: auto; /* Hauteur automatique pour s'adapter à la vidéo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+/*-----------------contact------------------*/
+/*-----------------contact------------------*/
+
+#contact{
+    min-height: 58vh;  /* Définit la hauteur minimale à la hauteur de l'écran */
+    margin-top: 200px;   /* Espace au-dessus de chaque section */
+    margin-bottom: 0px; /* Espace en-dessous de chaque section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    margin-top: 100px;
+    flex-basis: 60%;
+}
+
+
+.contact-left p{
+    margin-top: 60px;
+    color: #ffffff;
+}
+
+.contact-left d{
+    color: #ffffff;
+}
+
+.contact-left f{
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.contact-left p i{
+    color: #4f4d51;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-left d i{
+    color: #4f4d51;
+    margin-top: 30px;
+    margin-right: 15px;
+    font-size: 30px;
+    
+}
+
+.social-icon{
+    margin-top: 30px;
+}
+
+.social-icon a i{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #7700b5;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icon a:hover{
+    color: #4f4d51;
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: inline-block;
+    background: #4f4d51;
+    transition: background-color 0.3s; /* Animation douce pour le changement de couleur */
+}
+
+.btn:hover {
+    background-color: #454347; /* Couleur de fond plus foncée au survol, ajustée pour être un peu plus foncée que la couleur initiale */
+}
+
+
+#msg {
+    position: fixed;
+    width: 100%;   /* Assure que le span prend toute la largeur du parent */
+    text-align: center;  /* Centre le texte horizontalement */
+    left: 0;
+    bottom: 80px; /* Espacement entre le bouton et le message */
+    color: #4f4d51;  /* Couleur du texte du message */
+    font-size: 16px; /* Taille du texte */
+}
+
+
+form .btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+
+.contact-right form{
+    position: relative;
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 95%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #4f4d51; /* Ajoute une bordure visible pour tester */
+    background: #333; /* Assure une couleur de fond qui contraste avec la plupart des couleurs de texte */
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    padding: 25px; /* Reduce this value to decrease the space */
+    margin-top: 0x;
+    color: #fff;
+    
+}
+
+
+.copyright i{
+    color: #ff004f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Directly after your reset, reapply needed spacing on the copyright */
+  .copyright{
+    padding: 10px 25px; /* Adjust the padding to what you find visually appropriate */
+  }
+  
+
+
+
+
+
+  
+
+

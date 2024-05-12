@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="informatique.css">
+    <meta charset="UTF-8">
+    <title>Mon Portfolio</title>
+</head>
+
+<body>
+    <h1 class="page-title">Mon Portfolio a été fait avec du code :</h1>
+    <!-- Le reste de votre contenu ici -->
+<div class="chest">
+    <div class="chest__panel chest__panel--back"></div>
+    <div class="chest__panel chest__panel--top"></div>
+    <div class="chest__panel chest__panel--bottom"></div>
+    <div class="chest__panel chest__panel--right"></div>
+    <div class="chest__panel chest__panel--front">
+      <div class="chest__panel chest__panel--front-frame"></div>
+    </div>
+    <div class="chest__panel chest__panel--left"></div>
+    <div class="chest__drawer drawer" data-position="1">
+      <details>
+        <summary></summary>
+      </details>
+      <div class="drawer__structure">
+        <div class="drawer__panel drawer__panel--back"><span>HTML</span>
+        </div>
+        <div class="drawer__panel drawer__panel--bottom"></div>
+        <div class="drawer__panel drawer__panel--right"></div>
+        <div class="drawer__panel drawer__panel--left"></div>
+        <div class="drawer__panel drawer__panel--front"></div>
+      </div>
+    </div>
+    <div class="chest__drawer drawer" data-position="2">
+      <details>
+        <summary></summary>
+      </details>
+      <div class="drawer__structure">
+        <div class="drawer__panel drawer__panel--back"><span>CSS</span>
+        </div>
+        <div class="drawer__panel drawer__panel--bottom"></div>
+        <div class="drawer__panel drawer__panel--right"></div>
+        <div class="drawer__panel drawer__panel--left"></div>
+        <div class="drawer__panel drawer__panel--front"></div>
+      </div>
+    </div>
+    <div class="chest__drawer drawer" data-position="3">
+      <details>
+        <summary></summary>
+      </details>
+      <div class="drawer__structure">
+        <div class="drawer__panel drawer__panel--back"><span>JavaScript</span>
+        </div>
+        <div class="drawer__panel drawer__panel--bottom"></div>
+        <div class="drawer__panel drawer__panel--right"></div>
+        <div class="drawer__panel drawer__panel--left"></div>
+        <div class="drawer__panel drawer__panel--front"></div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Section pour les images -->
+      <div class="image-display right">
+        <img src="public final/description html.png" alt="HTML Image" class="image-html hidden">
+        <img src="public final/description css.png" alt="CSS Image" class="image-css hidden">
+        <img src="public final/description javascript.png" alt="JavaScript Image" class="image-js hidden">
+    </div>
+
+    <!-- Section pour les images à gauche -->
+    <div class="image-display left">
+        <img src="public final/lignes html.png" alt="HTML Left Image" class="image-html-left hidden">
+        <img src="public final/lignes css.png" alt="CSS Left Image" class="image-css-left hidden">
+        <img src="public final/lignes javascript.png" alt="JavaScript Left Image" class="image-js-left hidden">
+    </div>
+
+  <!------------------Infinite slide------------>
+
+  <div class="additional-tools">et quelques outils supplémentaires...</div>
+  <div class="tag-list">
+    <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+      <div class="inner">
+        <!-- Assurez-vous que les chemins des images sont corrects -->
+        <img src="public final/VS Code.png" alt="Description" class="image-tag-vscode">
+        <img src="public final/Threejs.png" alt="Description" class="image-tag-threejs">
+        <img src="public final/Sketchfab.png" alt="Description" class="image-tag-sketchfab">
+        <img src="public final/Github.png" alt="Description" class="image-tag-github">
+        <img src="public final/GPT.png" alt="Description" class="image-tag-gpt">
+        <img src="public final/Fontawesome.png" alt="Description" class="image-tag-font">
+        <!-- ... Plus d'images ... -->
+        <!-- Répétez les images pour que le défilement soit continu -->
+        <img src="public final/VS Code.png" alt="Description" class="image-tag-vscode">
+        <img src="public final/Threejs.png" alt="Description" class="image-tag-threejs">
+        <img src="public final/Sketchfab.png" alt="Description" class="image-tag-sketchfab">
+        <img src="public final/Github.png" alt="Description" class="image-tag-github">
+        <img src="public final/GPT.png" alt="Description" class="image-tag-gpt">
+        <img src="public final/Fontawesome.png" alt="Description" class="image-tag-font">
+        <!-- ... Plus d'images ... -->
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.querySelectorAll('.chest__drawer').forEach((drawer) => {
+        drawer.addEventListener('click', function (event) {
+            // Empêche le tiroir de se fermer automatiquement
+            event.preventDefault();
+
+            // Toggle l'état du tiroir (ouvert/fermé)
+            const details = drawer.querySelector('details');
+            const isOpen = details.hasAttribute('open');
+
+            // Cache toutes les images si le tiroir est déjà ouvert
+            if (isOpen) {
+                details.removeAttribute('open');
+                document.querySelectorAll('.image-display img').forEach((img) => {
+                    img.classList.add('hidden');
+                });
+            } else {
+                // Ouvre le tiroir et affiche les images correspondantes
+                document.querySelectorAll('.chest__drawer details').forEach((d) => {
+                    d.removeAttribute('open');
+                });
+                document.querySelectorAll('.image-display img').forEach((img) => {
+                    img.classList.add('hidden');
+                });
+
+                details.setAttribute('open', '');
+
+                const position = drawer.getAttribute('data-position');
+                if (position == 1) {
+                    document.querySelector('.image-html').classList.remove('hidden');
+                    document.querySelector('.image-html-left').classList.remove('hidden');
+                } else if (position == 2) {
+                    document.querySelector('.image-css').classList.remove('hidden');
+                    document.querySelector('.image-css-left').classList.remove('hidden');
+                } else if (position == 3) {
+                    document.querySelector('.image-js').classList.remove('hidden');
+                    document.querySelector('.image-js-left').classList.remove('hidden');
+                }
+            }
+        });
+    });
+</script>
+
+<style>
+    .image-display {
+        position: absolute;
+    }
+
+    .image-display.right {
+        right: 50px;
+        top: 100px;
+    }
+
+    .image-display.left {
+        left: 50px;
+        bottom: 100px;
+    }
+
+    .image-display img {
+        max-width: 1500px;
+        max-height: 1500px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+</body>
+
