@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-image: url('public final/mécanique\ sombre.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin réel de votre image */
+    background-image: url('public final/nature\ sombre.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin réel de votre image */
     background-size: cover; /* Assure que l'image couvre tout l'écran sans être déformée */
     background-position: center; /* Centre l'image dans la fenêtre de visualisation */
     background-repeat: no-repeat; /* Empêche l'image de se répéter */
@@ -316,23 +316,6 @@ ul {
     display: block;
 }
 
-
-@keyframes fadeBackground {
-    0%, 100% {
-        background-image: url('public final/mécanique\ sombre.png');
-    }
-    33% {
-        background-image: url('public final/mécanique\ sombre 2.png');
-    }
-    66% {
-        background-image: url('public final/mécanique\ sombre 3.png');
-    }
-}
-
-body {
-    background-size: cover;
-    animation: fadeBackground 18s infinite;
-}
 
 
 /*-----------------bouton cv--------------*/
